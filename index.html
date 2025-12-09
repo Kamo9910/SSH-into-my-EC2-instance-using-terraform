@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terraform with AWS</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>Terraform with AWS</h1>
+        
+        <video width="50%" height="50%" autoplay muted loop>
+         <source src="./Add a heading (3).mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+        
+        <h2>Project Overview:</h2>
+        <p>This project demonstrates how to fully automate the deployment of a web server on AWS using Terraform. The goal was to provision a secure EC2 instance, enable SSH access, and automatically deploy a simple HTML website using cloud-init. This showcases my ability to use Infrastructure as Code (IaC), manage AWS resources programmatically, and build repeatable, production-ready infrastructure. <br><br>Using Terraform, I created an SSH key pair, security groups, and an Ubuntu EC2 instance. Cloud-init was used to install Nginx and serve a custom HTML page immediately after the instance launched. The project highlights skills in AWS, Terraform, Linux server management, SSH, and automated web deployment.</p>
+        <h3>Architecture Overview</h3>
+        <p>- Terraform: infrastructure as Code engine <br>
+           - AWS Provider: EC2 and AMI data source <br>
+           - AWS CLI: Credentials management and validation <br>
+           - Security Group</p>
+         <h3>Steps taken to complets this project :</h3>
+            <h4>1. Initialize Project</h4>
+            <img class="myImage" src="Screenshot (1).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+            <img class="myImage" src="Screenshot (2).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+             <img class="myImage" src="Screenshot (3).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            
+            <p>Defined the requirements: <br>
+               - One EC2 instance <br>
+               - SSH access for administration <br>
+               - Http on port 80 for web-server <br>
+               - One Elastic IP </p>
+            <br>
+            <h4>2. Terraform plan</h4>
+            <img class="myImage" src="Screenshot (4).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (5).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <p>- Previews changes before they are applied to AWS. <br>
+               - Compares your Terraform configuration with the existing cloud infrastructure. <br>
+               - Identifies resources that will be created, updated, or deleted. <br>
+               - Ensures accuracy and prevents mistakes before deployment. <br>
+               - Provides a safe “dry run” so you can review infrastructure changes with confidence.</p>
+            <br>
+            <h4>3. Terraform apply</h4>
+           <img class="myImage" src="Screenshot (6).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (7).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Executes the changes defined in your Terraform configuration. <br>
+               - Creates, updates, or deletes cloud resources exactly as shown in the plan. <br>
+               - Builds real infrastructure on AWS based on your code. <br>
+               - Prompts for confirmation before making any changes. <br>
+               - Ensures consistent, automated deployment of cloud environments.</p>
+            <br>
+            <h4>4. SSH into My EC2 Instance</h4>
+            <img class="myImage" src="Screenshot (8).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <p>- Securely connects to the EC2 server using an encrypted SSH connection. <br>
+              - Provides terminal access to manage and configure the Linux instance directly. <br>
+              - Allows installation of software, updates, and services on the server. <br>
+              - Enables file management such as creating folders, editing files, and monitoring logs. <br>
+              - Gives full administrative control to run commands and maintain the server environment.</p>
+
+            <h4>5.Creating a EC2 web server using terraform</h4>
+           <img class="myImage" src="Screenshot (9).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+           <img class="myImage" src="Screenshot (10).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+           <img class="myImage" src="Screenshot (11).png" alt="APIGateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (12).png" alt="APIGateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <p>- Automates deployment of a fully configured web server on AWS. <br>
+              - Provision EC2 instance with the required AMI and instance type. <br>
+              - Installs and starts a web server (e.g., Apache or Nginx) using user data scripts. <br>
+              - Creates security groups to allow HTTP and SSH access. <br>
+              - Ensures repeatable infrastructure, allowing the web server to be rebuilt consistently anytime.</p>
+
+            <h4>6. Terraform Destroy</h4>
+           <img class="myImage" src="Screenshot (13).png" alt="frontend" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (14).png" alt="frontend" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <p>- To delete the EC2 instance runninng on AWS run the "terraform destroy" in the command Prompt <br>
+              - after the prompt has done runing you will be alerted on the command prompt <br>
+              - Go to AWS console and verify that your EC2 instance has been Terminated </p>
+            
+            </div>
+
+        <script src="javascript.js" charset="utf-8" ></script>
+
+</body>
+</html>
